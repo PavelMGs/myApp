@@ -1,0 +1,36 @@
+.root {
+    overflow-x: hidden;
+
+    margin: 32px 18px 16px 16px;
+}
+
+.header_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: #5B5B5B;
+    font-size: 16px;
+}
+
+.icons {
+    & > button {
+        background: none;
+        border: none;
+        outline: none;
+
+        & > ion-img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    overflow-x: scroll;
+}
