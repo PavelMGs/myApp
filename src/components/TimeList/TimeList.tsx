@@ -19,7 +19,7 @@ const TimeList: React.FC<ITimeList> = ({ time }) => {
             {/* для горизонтального скролла */}
             <div className={s.container}>
                 {
-                    time.map((item, index) => <Time date={item} index={index} selected={index === settedTime} />)
+                    time.map((item, index) => <Time date={item} index={index} key={`${index}time`} selected={index === settedTime} />)
                 }
             </div>
         </div>

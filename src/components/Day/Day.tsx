@@ -6,21 +6,17 @@ import s from './Day.module.scss';
 interface IDay {
     date: number,
     selected: boolean,
-    key: number,
+    key: string,
     id: number,
 }
 
 const day = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
 const Day: React.FC<IDay> = ({ date, selected, id }) => {
-    const [currentDate, setCurrentDate] = useState(new Date());
-    const [incomingDate, setIncomingDate] = useState(new Date(date));
+    const [currentDate] = useState(new Date());
+    const [incomingDate] = useState(new Date(date));
 
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        console.log(selected);
-    }, [])
 
     // проверка, является ли переданный день сегодняшним
     if (currentDate.getDate() === incomingDate.getDate() && currentDate.getMonth() === incomingDate.getMonth()) {

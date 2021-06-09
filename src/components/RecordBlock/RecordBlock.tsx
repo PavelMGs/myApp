@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import months from '../../utils/months';
 import { toTwoDigitFormat } from '../../utils/toTwoDigitFormat';
 import s from './RecordBlock.module.scss';
-import db from '../../firestore';
+import db  from '../../firestore';
 
 interface IRecordBlock {
     timestamp: number,

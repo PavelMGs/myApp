@@ -8,6 +8,7 @@ interface ITime {
     date: number,
     index: number,
     selected: boolean,
+    key: string,
 }
 
 const Time: React.FC<ITime> = ({ date, index, selected }) => {

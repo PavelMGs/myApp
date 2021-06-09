@@ -14,9 +14,6 @@ interface IDayList {
 const DateList: React.FC<IDayList> = ({ timestamp }) => {
     const day = useSelector((state: RootState) => state.day.value)
 
-    useEffect(() => {
-        console.log(day);
-    }, [day])
     return (
         <div className={s.root}>
             <div className={s.header_block}>
@@ -24,13 +21,11 @@ const DateList: React.FC<IDayList> = ({ timestamp }) => {
                 <div className={s.icons}>
                     <button
                         type="button"
-                        onClick={() => console.log('Click')}
                     >
                         <IonImg src={Disable} />
                     </button>
                     <button
                         type="button"
-                        onClick={() => console.log('Click')}
                     >
                         <IonImg src={Union} />
                     </button>
@@ -41,13 +36,7 @@ const DateList: React.FC<IDayList> = ({ timestamp }) => {
                 className={s.container}
             >
                 {
-                    timestamp.map((item, index) => {
-                        if(index === day) { // если индекс совпадает со значениев в сторе, будем применять другие стили к дате
-                            return <Day date={item} selected={true} key={index} id={index}/>;
-                        } else {
-                            return <Day date={item} selected={false} key={index} id={index}/>;
-                        }
-                    })
+                    timestamp.map((item, index) =>  <Day date={item} selected={index === day} key={`${index}day`} id={index}/>) // если индекс совпадает со значениев в сторе, будем применять другие стили к дате
                 }
             </div>
         </div>
