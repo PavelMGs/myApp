@@ -27,18 +27,18 @@ interface IResponce {
 
 const MainBlock = () => {
     const state = useSelector((state: RootState) => state);
-    const [isFirstRender, setIsFirstRender] = useState(true);
     const dispatch = useDispatch();
 
     const handleGetRecords = async () => {
         const data = await db.collection('regisrtation').doc('Time').get();
         const { day, time } = data.data() as IResponce;
+        // отправляем данные по дню, на который мы уже записались, в редакс
         dispatch(setDay(timestamp.indexOf(day)));
         dispatch(setTime(timeL.indexOf(time)));
     }
 
     useEffect(() => {
-        handleGetRecords();
+        handleGetRecords(); // получаем уже существующие записи из Firestore
     }, [])
 
     return (

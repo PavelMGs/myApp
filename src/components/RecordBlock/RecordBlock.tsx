@@ -21,7 +21,7 @@ const RecordBlock: React.FC<IRecordBlock> = ({ timestamp, time }) => {
     }, [time]);
 
     const handleSubmit = () => {
-        db.collection('regisrtation').doc('Time').set({time, day: timestamp})
+        db.collection('regisrtation').doc('Time').set({time, day: timestamp})  // отправляем нашу регистрацию в БД
     }
 
     return (

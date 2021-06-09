@@ -1,0 +1,35 @@
+[debug] [2021-06-09T12:27:22.716Z] ----------------------------------------------------------------------
+[debug] [2021-06-09T12:27:22.719Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PavelMG\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-09T12:27:22.719Z] CLI Version:   9.12.1
+[debug] [2021-06-09T12:27:22.719Z] Platform:      win32
+[debug] [2021-06-09T12:27:22.719Z] Node Version:  v12.18.4
+[debug] [2021-06-09T12:27:22.726Z] Time:          Wed Jun 09 2021 15:27:22 GMT+0300 (GMT+03:00)
+[debug] [2021-06-09T12:27:22.726Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-09T12:27:22.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-09T12:27:22.737Z] > authorizing via signed-in user (pavelmg99@gmail.com)
+[debug] [2021-06-09T12:27:22.737Z] [iam] checking project myapp-10aec for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-09T12:27:22.739Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-09T12:27:22.740Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-09T12:27:22.924Z] <<< HTTP RESPONSE 200 {"date":"Wed, 09 Jun 2021 12:27:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-09T12:27:22.932Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/myapp-10aec:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-06-09T12:27:23.717Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 09 Jun 2021 12:27:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=677","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-09T12:27:23.718Z] > refreshing access token with scopes: []
+[debug] [2021-06-09T12:27:23.719Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-09T12:27:23.832Z] <<< HTTP RESPONSE 200 {"date":"Wed, 09 Jun 2021 12:27:24 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-09T12:27:23.918Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myapp-10aec [none]
+[debug] [2021-06-09T12:27:24.190Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myapp-10aec 200
+[debug] [2021-06-09T12:27:24.190Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myapp-10aec {"projectId":"myapp-10aec","projectNumber":"862041701545","displayName":"myApp","name":"projects/myapp-10aec","resources":{"hostingSite":"myapp-10aec","realtimeDatabaseInstance":"myapp-10aec-default-rtdb","storageBucket":"myapp-10aec.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'myapp-10aec'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-06-09T12:27:24.194Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-09T12:27:24.195Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-09T12:27:24.320Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Wed, 09 Jun 2021 12:27:24 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-09T12:27:24.328Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/myapp-10aec/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
