@@ -1,0 +1,26 @@
+.root{
+    width: 87px;
+    height: 32px;
+
+    font-size: 24px;
+    color: #C1C1C1;
+
+    margin-right: 16px;
+
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    padding: 0px 16px;
+}
+
+.selected {
+    width: 83px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #33BDE4;
+
+    height: 40px;
+
+    text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.04);
+}

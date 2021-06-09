@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Day from '../Day/Day';
 import s from './DateList.module.scss';
 import Disable from '../../assets/disable.png';
 import Union from '../../assets/Union.png';
 import { IonImg } from '@ionic/react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
-const time = [1623024000000, 1623283200000, 1623369600000, 1623456000000, 1623542400000, 1623628800000, 1623715200000] //условно, получаем с бэка дни, на которые есть запись
+interface IDayList {
+    timestamp: number[],
+}
 
-const DateList = () => {
+const DateList: React.FC<IDayList> = ({ timestamp }) => {
+    const day = useSelector((state: RootState) => state.day.value)
+
+    useEffect(() => {
+        console.log(day);
+    }, [day])
     return (
         <div className={s.root}>
             <div className={s.header_block}>
@@ -27,9 +36,18 @@ const DateList = () => {
                     </button>
                 </div>
             </div>
-            <div className={s.container}>
+            {/* обёртка для реализации горизонтального скролла */}
+            <div
+                className={s.container}
+            >
                 {
-                    time.map(item => <Day date={item} />)
+                    timestamp.map((item, index) => {
+                        if(index === day) { // если индекс совпадает со значениев в сторе, будем применять другие стили к дате
+                            return <Day date={item} selected={true} key={index} id={index}/>;
+                        } else {
+                            return <Day date={item} selected={false} key={index} id={index}/>;
+                        }
+                    })
                 }
             </div>
         </div>

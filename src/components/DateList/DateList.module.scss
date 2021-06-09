@@ -2,6 +2,8 @@
     overflow-x: hidden;
 
     margin: 32px 18px 16px 16px;
+
+    width: 100%;
 }
 
 .header_block {
@@ -11,6 +13,8 @@
 
     color: #5B5B5B;
     font-size: 16px;
+
+    margin-left: 16px;
 }
 
 .icons {
@@ -33,4 +37,7 @@
     width: 100%;
 
     overflow-x: scroll;
+
+    margin-left: 16px;
+    
 }
